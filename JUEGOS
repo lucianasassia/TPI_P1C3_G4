@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 def PasaPalabra():
     rosco1=open("D:\\Users\\Usuario\\Documents\\prueba\\Definiciones1.txt")
     linea=rosco1.readline()
@@ -323,7 +316,6 @@ try:
     print("         5-Salir")  
     
     juego = int(input())   
-    
     if juego == 1:
         PasaPalabra()
     if juego == 2:
