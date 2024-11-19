@@ -340,5 +340,7 @@ try:
                
                """)
     
+    else:
+        print("Porfavor ingrese un Numero Valido. ;)")
 except ValueError:
-    print("Porfavor ingrese un Numero Valido. ;)")
+        print("Por favor, ingresa un número válido.")
