@@ -1,0 +1,17 @@
+import random
+opciones = ["piedra", "papel", "tijera"]
+eleccion = input("Elegí piedra, papel o tijera: ").lower()
+if eleccion not in opciones:
+    print("Opción no válida, elegí entre piedra, papel o tijera.")
+else:
+    computadoraEleccion = random.choice(opciones)
+    print("Elegiste:", eleccion)
+    print("La computadora eligió:", computadoraEleccion)
+    if eleccion == computadoraEleccion:
+        print("¡Es un empate!")
+    elif (eleccion == "piedra" and computadoraEleccion == "tijera") or \
+         (eleccion == "papel" and computadoraEleccion == "piedra") or \
+         (eleccion == "tijera" and computadoraEleccion == "papel"):
+        print("¡Ganaste!")
+    else:
+        print("La computadora ganó.")
