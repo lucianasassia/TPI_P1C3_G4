@@ -1,12 +1,26 @@
 def PasaPalabra():
+    def tableroFinal():
+        for i in range(26):
+            print(abecedario[i],end=" ")
+        print()
+        print("ACIERTOS: ",aciertos,"\n","ERRORES: ",errores,"\n","PASAPALABRAS: ",sinRespuesta)
+    
     abecedario=["A ","B ","C ","D ","E ","F ","G ","H ","I ","J ","K ","L ","M ","N ","O ","P ","Q ","R ","S ","T ","U ","V ","W ","X ","Y ","Z "]
     j=0
     aciertos=0
     errores=0
     sinRespuesta=26
+
+    eligeRosco=input("Elige tu rosco: 1 o 2\n")
+    
     for j in range(3):
-        rosco1=open("D:\\Users\\Usuario\\Documents\\prueba\\Definiciones1.txt")
-        linea=rosco1.readline()
+        if (eligeRosco=="1"):
+            rosco=open("D:\\Users\\Usuario\\Documents\\GitHub\\TPI_P1C3_G4\\Rosco1.txt")
+        elif(eligeRosco=="2"):
+            rosco=open("D:\\Users\\Usuario\\Documents\\GitHub\\TPI_P1C3_G4\\Rosco2.txt")
+        linea=rosco.readline()
+        #rosco1=open("D:\\Users\\Usuario\\Documents\\prueba\\Definiciones1.txt")
+        #linea=rosco1.readline()
         for j in range (26): 
             campos=linea.strip().split(":")
             if (abecedario[j]!="🟩" and abecedario[j]!="🟥"):
@@ -28,18 +42,16 @@ def PasaPalabra():
                     abecedario[j]="🟥"
                     errores=errores+1
                     sinRespuesta=sinRespuesta-1
-                linea=rosco1.readline()
+                linea=rosco.readline()
             else:
-                linea = rosco1.readline()
+                linea = rosco.readline()
             j+=1
         j=0
     j=0
     i=0
-    for i in range(26):
-        print(abecedario[i],end=" ")
-    print()
-    print("ACIERTOS: ",aciertos,"\n","ERRORES: ",errores,"\n","PASAPALABRAS: ",sinRespuesta)
-    rosco1.close()
+    tableroFinal()
+    rosco.close()
+    
 def batallaNaval ():
     import random
 
