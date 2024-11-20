@@ -44,10 +44,10 @@ def colocar_barco(tablero, tamano, tamaño_barco):
 def disparar(tablero, fila, columna):
     if tablero[(fila, columna)] == 'B':
         tablero[(fila, columna)] = 'X'  # Barco hundido
-        return 'tocado'  # En lugar de True, usamos 'tocado'
+        return 'tocado'  #  'tocado'
     elif tablero[(fila, columna)] == '~':
         tablero[(fila, columna)] = 'O'  # Agua
-        return 'agua'  # En lugar de False, usamos 'agua'
+        return 'agua'  'agua'
     else:
         return 'ya_disparado'  # Ya disparaste ahí
 
